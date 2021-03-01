@@ -1,0 +1,26 @@
+{
+  "name": "kontent-netlify-webhook-processor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@kentico/kontent-delivery": "^10.3.0",
+    "@kentico/kontent-webhook-helper": "^1.1.0",
+    "crypto": "^1.0.1",
+    "rxjs": "^6.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strizr/kontent-netlify-webhook-processor.git"
+  },
+  "author": "strizr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strizr/kontent-netlify-webhook-processor/issues"
+  },
+  "homepage": "https://github.com/strizr/kontent-netlify-webhook-processor#readme"
+}
