@@ -1,5 +1,5 @@
-const KontentDelivery = require('@kentico/kontent-delivery');
-const KontentHelper = require('@kentico/kontent-webhook-helper');
+const KontentDelivery = require('@kontent-ai/delivery-sdk');
+const KontentHelper = require('@kontent-ai/webhook-helper');
 
 const CONFIG_DELIMITER = ",";
 

@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "dependencies": {
-    "@kentico/kontent-delivery": "^10.3.0",
-    "@kentico/kontent-webhook-helper": "^1.1.0",
-    "crypto": "^1.0.1",
-    "rxjs": "^6.6.3"
+    "@kontent-ai/delivery-sdk": "^12.1.0",
+    "@kontent-ai/webhook-helper": "^2.0.1"
   },
   "repository": {
     "type": "git",
