@@ -1,16 +1,14 @@
-[![Gallery][gallery-shield]](https://kentico.github.io/kontent-custom-element-samples/gallery/)
-
 ![Last modified][last-commit]
 [![Issues][issues-shield]][issues-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![MIT License][license-shield]][license-url]
 
-[![Stack Overflow][stack-shield]](https://stackoverflow.com/tags/kentico-kontent)
-[![GitHub Discussions][discussion-shield]](https://github.com/Kentico/Home/discussions)
+[![Stack Overflow][stack-shield]](https://stackoverflow.com/tags/kontent-ai)
+[![Discord][discord-shield]](https://discord.gg/SKCxwPtevJ)
 
 <p align="center">
-<image src="docs/01-kk-logo-main.svg" alt="kontent logo" width="200" />
+<image src="docs/kai-logo-hor-pos-rgb.svg" alt="kontent logo" width="300" />
 <image src="docs/netlify_logo.png" alt="netlify logo" width="300">
 </p>
 
@@ -22,16 +20,16 @@
   <a href="#additional-resources">Resources</a>
 </p>
 
-This repository contains a _template_ for a [Netlify function](https://docs.netlify.com/functions/overview/) that allows you to easily process any [webhook](https://docs.kontent.ai/tutorials/develop-apps/integrate/webhooks) coming from [Kentico Kontent](https://kontent.ai/).
+This repository contains a _template_ for a [Netlify function](https://docs.netlify.com/functions/overview/) that allows you to easily process any [webhook](https://docs.kontent.ai/tutorials/develop-apps/integrate/webhooks) coming from [Kontent.ai](https://kontent.ai/).
 
 ## When to use
 This is a **template** to show a simple way to process webhooks coming from Kontent. It's currently written to process [Delivery API Triggers](https://docs.kontent.ai/reference/webhooks-reference#a-delivery-api-triggers), but can be **easily extended/changed** to support any desired scenario.
 
 In its current form, the template will let you:
 - specify which webhooks you want to process (types + operations)
-- automatically let's you access the latest version of affected content through Kontent's [Delivery API](https://docs.kontent.ai/reference/delivery-api)
+- automatically lets you access the latest version of affected content through Kontent.ai [Delivery API](https://docs.kontent.ai/reference/delivery-api)
 
-The general **example use case** would be any type of content sychronization triggered by changes to the original content. Example scenarios might include _website search_, _synchronizing content for recommendations_, or _caching_, etc. 
+The general **example use case** would be any type of content synchronization triggered by changes to the original content. Example scenarios might include _website search_, _synchronizing content for recommendations_, or _caching_, etc. 
 
 > **⚠ WARNING: The Netlify functions are currently _stateless_, so there is no way to store/access any previous context within the function.**
 
@@ -40,7 +38,7 @@ The general **example use case** would be any type of content sychronization tri
 1. ### Quick Deploy
     Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your account as well.
 
-    [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Kentico/kontent-netlify-webhook-processor)
+    [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kontent-ai/netlify-webhook-processor)
 
     Once your project is deployed, navigate to the **Functions** tab and click your deployed function. 
 
@@ -49,8 +47,8 @@ The general **example use case** would be any type of content sychronization tri
     To continue the setup, you'll need to **copy** the function's **Endpoint** URL, i.e. the URL the function is listening on. 
 
     ![Netlify function endpoint](docs/netlify_function_02.png)
-2. ### Create a new Webhook in Kentico Kontent
-    The next step is [creating a new webhook in Kentico Kontent](https://docs.kontent.ai/tutorials/develop-apps/integrate/webhooks#a-create-a-webhook). 
+2. ### Create a new Webhook in Kontent.ai
+    The next step is [creating a new webhook in Kontent.ai](https://docs.kontent.ai/tutorials/develop-apps/integrate/webhooks#a-create-a-webhook). 
 
     You'll insert your copied **netlify function endpoint url** into the **URL address** field, like on the image below. 
 
@@ -91,8 +89,8 @@ The general **example use case** would be any type of content sychronization tri
 ## Contributors
 We have collected notes on how to contribute to this project in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-<a href="https://github.com/Kentico/kontent-netlify-webhook-processor/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Kentico/kontent-netlify-webhook-processor" />
+<a href="https://github.com/kontent-ai/netlify-webhook-processor/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kontent-ai/netlify-webhook-processor" />
 </a>
 
 ## License
@@ -101,23 +99,20 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 
 ## Additional Resources
 
-- [Custom Element Gallery on github](https://kentico.github.io/kontent-custom-element-samples/gallery/)
-- [Kentico Kontent's Integration documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrations-overview)
+- [Kontent.ai Integration documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrations-overview)
 
 
-[last-commit]: https://img.shields.io/github/last-commit/Kentico/kontent-netlify-webhook-processor?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/Kentico/kontent-netlify-webhook-processor.svg?style=for-the-badge
-[contributors-url]: https://github.com/Kentico/kontent-netlify-webhook-processor/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Kentico/kontent-netlify-webhook-processor.svg?style=for-the-badge
-[forks-url]: https://github.com/Kentico/kontent-netlify-webhook-processor/network/members
-[stars-shield]: https://img.shields.io/github/stars/Kentico/kontent-netlify-webhook-processor.svg?style=for-the-badge
-[stars-url]: https://github.com/Kentico/kontent-netlify-webhook-processor/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Kentico/kontent-netlify-webhook-processor.svg?style=for-the-badge
-[issues-url]: https://github.com/Kentico/kontent-netlify-webhook-processor/issues
-[license-shield]: https://img.shields.io/github/license/Kentico/kontent-netlify-webhook-processor.svg?style=for-the-badge
-[license-url]: https://github.com/Kentico/kontent-netlify-webhook-processor/blob/master/LICENSE
-[core-shield]: https://img.shields.io/static/v1?label=&message=core%20integration&style=for-the-badge&color=FF5733
-[gallery-shield]: https://img.shields.io/static/v1?label=&message=extension%20gallery&style=for-the-badge&color=51bce0
+[last-commit]: https://img.shields.io/github/last-commit/kontent-ai/netlify-webhook-processor?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/kontent-ai/netlify-webhook-processor.svg?style=for-the-badge
+[contributors-url]: https://github.com/kontent-ai/netlify-webhook-processor/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kontent-ai/netlify-webhook-processor.svg?style=for-the-badge
+[forks-url]: https://github.com/kontent-ai/netlify-webhook-processor/network/members
+[stars-shield]: https://img.shields.io/github/stars/kontent-ai/netlify-webhook-processor.svg?style=for-the-badge
+[stars-url]: https://github.com/kontent-ai/netlify-webhook-processor/stargazers
+[issues-shield]: https://img.shields.io/github/issues/kontent-ai/netlify-webhook-processor.svg?style=for-the-badge
+[issues-url]: https://github.com/kontent-ai/netlify-webhook-processor/issues
+[license-shield]: https://img.shields.io/github/license/kontent-ai/netlify-webhook-processor.svg?style=for-the-badge
+[license-url]: https://github.com/kontent-ai/netlify-webhook-processor/blob/master/LICENSE
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
-[discussion-shield]: https://img.shields.io/badge/GitHub-Discussions-FE7A16.svg?logo=github&style=for-the-badge
+[discord-shield]: https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white&style=for-the-badge
 [product-demo]: docs/demo.gif?raw=true
