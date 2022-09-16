@@ -52,7 +52,7 @@ The general **example use case** would be any type of content synchronization tr
 
     You'll insert your copied **netlify function endpoint url** into the **URL address** field, like on the image below. 
 
-    ![Kontent Webhook URL](docs/kontent-ai_webhook_url.png)
+    ![Kontent.ai Webhook URL](docs/kontent-ai_webhook_url.png)
 
     After naming your webhook and setting up the URL, your webhook **Secret** is going to be generated. Copy the secret, set your desired triggers, and save the webhook. 
 
