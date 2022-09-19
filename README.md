@@ -20,14 +20,14 @@
   <a href="#additional-resources">Resources</a>
 </p>
 
-This repository contains a _template_ for a [Netlify function](https://docs.netlify.com/functions/overview/) that allows you to easily process any [webhook](https://docs.kontent.ai/tutorials/develop-apps/integrate/webhooks) coming from [Kontent.ai](https://kontent.ai/).
+This repository contains a _template_ for a [Netlify function](https://docs.netlify.com/functions/overview/) that allows you to easily process any [webhook](https://kontent.ai/learn/tutorials/develop-apps/integrate/webhooks) coming from [Kontent.ai](https://kontent.ai/).
 
 ## When to use
-This is a **template** to show a simple way to process webhooks coming from Kontent. It's currently written to process [Delivery API Triggers](https://docs.kontent.ai/reference/webhooks-reference#a-delivery-api-triggers), but can be **easily extended/changed** to support any desired scenario.
+This is a **template** to show a simple way to process webhooks coming from Kontent. It's currently written to process [Delivery API Triggers](https://kontent.ai/learn/reference/webhooks-reference#a-delivery-api-triggers), but can be **easily extended/changed** to support any desired scenario.
 
 In its current form, the template will let you:
 - specify which webhooks you want to process (types + operations)
-- automatically lets you access the latest version of affected content through Kontent.ai [Delivery API](https://docs.kontent.ai/reference/delivery-api)
+- automatically lets you access the latest version of affected content through Kontent.ai [Delivery API](https://kontent.ai/learn/reference/delivery-api)
 
 The general **example use case** would be any type of content synchronization triggered by changes to the original content. Example scenarios might include _website search_, _synchronizing content for recommendations_, or _caching_, etc. 
 
@@ -48,7 +48,7 @@ The general **example use case** would be any type of content synchronization tr
 
     ![Netlify function endpoint](docs/netlify_function_02.png)
 2. ### Create a new Webhook in Kontent.ai
-    The next step is [creating a new webhook in Kontent.ai](https://docs.kontent.ai/tutorials/develop-apps/integrate/webhooks#a-create-a-webhook). 
+    The next step is [creating a new webhook in Kontent.ai](https://kontent.ai/learn/tutorials/develop-apps/integrate/webhooks#a-create-a-webhook). 
 
     You'll insert your copied **netlify function endpoint url** into the **URL address** field, like on the image below. 
 
@@ -61,7 +61,7 @@ The general **example use case** would be any type of content synchronization tr
 
     > **⚠ WARNING: Since the variables are being evaluated at build-time, you'll have to rebuild your site in order to propagate any change you make to any of your variables.**
 
-    There is a [webhook validation mechanism](https://docs.kontent.ai/tutorials/develop-apps/integrate/webhooks#a-validate-received-notifications) implemented for Kontent's webhooks. 
+    There is a [webhook validation mechanism](https://kontent.ai/learn/tutorials/develop-apps/integrate/webhooks#a-validate-received-notifications) implemented for Kontent's webhooks. 
     The **secret** we generated in the previous step while creating a new webhook is used to ensure integrity of the webhook's payload, i.e. it confirms the payload was not tampered with during its journey.
 
     You'll need to share this secret with your netlify function so that the integrity check can be performed. 
@@ -72,8 +72,8 @@ The general **example use case** would be any type of content synchronization tr
 
     Here, you'll be able to create your variables. This example uses 
     
-    - **ALLOWED_OPERATIONS** as a list of [operations](https://docs.kontent.ai/reference/webhooks-reference#a-types-and-operations) the function will accept (string, multiple values delimited by comma `,`)
-    - **ALLOWED_TYPES** as a list of [event types](https://docs.kontent.ai/reference/webhooks-reference#a-types-and-operations) the function will accept (string. multiple values delimited by comma `,`)
+    - **ALLOWED_OPERATIONS** as a list of [operations](https://kontent.ai/learn/reference/webhooks-reference#a-types-and-operations) the function will accept (string, multiple values delimited by comma `,`)
+    - **ALLOWED_TYPES** as a list of [event types](https://kontent.ai/learn/reference/webhooks-reference#a-types-and-operations) the function will accept (string. multiple values delimited by comma `,`)
     - **KONTENT_SECRET** as the generated webhook secret you obtained from the previous step 
 
     ![Netlify Environment settings](docs/netlify_variables2.png)
@@ -99,7 +99,7 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 
 ## Additional Resources
 
-- [Kontent.ai Integration documentation](https://docs.kontent.ai/tutorials/develop-apps/integrate/integrations-overview)
+- [Kontent.ai Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
 
 
 [last-commit]: https://img.shields.io/github/last-commit/kontent-ai/netlify-webhook-processor?style=for-the-badge
