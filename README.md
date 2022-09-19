@@ -8,7 +8,10 @@
 [![Discord][discord-shield]](https://discord.gg/SKCxwPtevJ)
 
 <p align="center">
-<image src="docs/kai-logo-hor-pos-rgb.svg" alt="kontent logo" width="300" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/kai-logo-hor-neg-rgb.svg">
+  <img alt="Kontent.ai logo for dark/light scheme." src="docs/kai-logo-hor-pos-rgb.svg" width="300">
+</picture>
 <image src="docs/netlify_logo.png" alt="netlify logo" width="300">
 </p>
 
