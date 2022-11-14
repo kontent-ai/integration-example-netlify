@@ -44,7 +44,7 @@ The general **example use case** would be any type of content synchronization tr
 1. ### Quick Deploy
     Netlify has made this easy. If you click the deploy button below, it will guide you through the process of deploying it to Netlify and leave you with a copy of the repository in your account as well.
 
-    [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kontent-ai/netlify-webhook-processor)
+    [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/kontent-ai/integration-example-netlify)
 
     Once your project is deployed, navigate to the **Functions** tab and click your deployed function. 
 
@@ -95,8 +95,8 @@ The general **example use case** would be any type of content synchronization tr
 ## Contributors
 We have collected notes on how to contribute to this project in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-<a href="https://github.com/kontent-ai/netlify-webhook-processor/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=kontent-ai/netlify-webhook-processor" />
+<a href="https://github.com/kontent-ai/integration-example-netlify/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=kontent-ai/integration-example-netlify" />
 </a>
 
 ## License
@@ -108,17 +108,17 @@ We have collected notes on how to contribute to this project in [CONTRIBUTING.md
 - [Kontent.ai Integration documentation](https://kontent.ai/learn/tutorials/develop-apps/integrate/integrations-overview)
 
 
-[last-commit]: https://img.shields.io/github/last-commit/kontent-ai/netlify-webhook-processor?style=for-the-badge
-[contributors-shield]: https://img.shields.io/github/contributors/kontent-ai/netlify-webhook-processor.svg?style=for-the-badge
-[contributors-url]: https://github.com/kontent-ai/netlify-webhook-processor/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/kontent-ai/netlify-webhook-processor.svg?style=for-the-badge
-[forks-url]: https://github.com/kontent-ai/netlify-webhook-processor/network/members
-[stars-shield]: https://img.shields.io/github/stars/kontent-ai/netlify-webhook-processor.svg?style=for-the-badge
-[stars-url]: https://github.com/kontent-ai/netlify-webhook-processor/stargazers
-[issues-shield]: https://img.shields.io/github/issues/kontent-ai/netlify-webhook-processor.svg?style=for-the-badge
-[issues-url]: https://github.com/kontent-ai/netlify-webhook-processor/issues
-[license-shield]: https://img.shields.io/github/license/kontent-ai/netlify-webhook-processor.svg?style=for-the-badge
-[license-url]: https://github.com/kontent-ai/netlify-webhook-processor/blob/main/LICENSE
+[last-commit]: https://img.shields.io/github/last-commit/kontent-ai/integration-example-netlify?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/kontent-ai/integration-example-netlify.svg?style=for-the-badge
+[contributors-url]: https://github.com/kontent-ai/integration-example-netlify/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/kontent-ai/integration-example-netlify.svg?style=for-the-badge
+[forks-url]: https://github.com/kontent-ai/integration-example-netlify/network/members
+[stars-shield]: https://img.shields.io/github/stars/kontent-ai/integration-example-netlify.svg?style=for-the-badge
+[stars-url]: https://github.com/kontent-ai/integration-example-netlify/stargazers
+[issues-shield]: https://img.shields.io/github/issues/kontent-ai/integration-example-netlify.svg?style=for-the-badge
+[issues-url]: https://github.com/kontent-ai/integration-example-netlify/issues
+[license-shield]: https://img.shields.io/github/license/kontent-ai/integration-example-netlify.svg?style=for-the-badge
+[license-url]: https://github.com/kontent-ai/integration-example-netlify/blob/main/LICENSE
 [stack-shield]: https://img.shields.io/badge/Stack%20Overflow-ASK%20NOW-FE7A16.svg?logo=stackoverflow&logoColor=white&style=for-the-badge
 [discord-shield]: https://img.shields.io/discord/821885171984891914?label=Discord&logo=Discord&logoColor=white&style=for-the-badge
 [product-demo]: docs/demo.gif?raw=true
