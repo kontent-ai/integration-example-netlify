@@ -1,22 +1,11 @@
 {
-  "name": "netlify-webhook-processor",
+  "name": "@kontent-ai/integration-example-netlify",
   "version": "1.0.0",
-  "description": "",
   "dependencies": {
     "@kontent-ai/delivery-sdk": "^12.1.0",
     "@kontent-ai/webhook-helper": "^2.0.1",
     "@netlify/functions": "^1.2.0"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kontent-ai/netlify-webhook-processor.git"
-  },
-  "author": "strizr",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kontent-ai/netlify-webhook-processor/issues"
-  },
-  "homepage": "https://github.com/kontent-ai/netlify-webhook-processor#readme",
   "devDependencies": {
     "@types/node": "^18.7.17"
   }

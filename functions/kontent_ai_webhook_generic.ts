@@ -5,6 +5,7 @@ import {
   IWebhookDeliveryData,
   IWebhookResponse
 } from "@kontent-ai/webhook-helper/dist/cjs/models/webhook-models.class.ts";
+import packageJson from '../package.json'
 
 const CONFIG_DELIMITER = ",";
 
@@ -19,7 +20,7 @@ export const handler: Handler = async (event) => {
     return { statusCode: 400, body: "Missing body" };
   }
 
-  // Consistency check - make sure your netlify enrionment variable and your webhook secret matches
+  // Consistency check - make sure your netlify environment variable and your webhook secret matches
   if (!signatureHelper.isValidSignatureFromString(event.body, process.env.KONTENT_SECRET ?? '', event.headers['x-kc-signature'] ?? '')) {
     return { statusCode: 401, body: "Unauthorized" };
   }
@@ -43,7 +44,10 @@ export const handler: Handler = async (event) => {
   }
 
   // download the affected items
-  const deliveryClient = new DeliveryClient({ projectId });
+  const deliveryClient = new DeliveryClient({
+    projectId,
+    globalHeaders: () => [{ header: 'X-KC-SOURCE', value: `${packageJson.name};${packageJson.version}` }]
+  });
   const response = await Promise.all(webhookData.items.map(item => deliveryClient.item(item.codename).languageParameter(item.language).toPromise()));
 
   // print the affected content items into function log
