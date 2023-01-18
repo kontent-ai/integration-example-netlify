@@ -1,6 +1,14 @@
 {
   "name": "@kontent-ai/integration-example-netlify",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kontent-ai/integration-example-netlify.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kontent-ai/integration-example-netlify/issues"
+  },
   "dependencies": {
     "@kontent-ai/delivery-sdk": "^12.1.0",
     "@kontent-ai/webhook-helper": "^2.0.1",
