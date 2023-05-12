@@ -1,10 +1,8 @@
 import { DeliveryClient } from '@kontent-ai/delivery-sdk';
 import { signatureHelper } from '@kontent-ai/webhook-helper';
+import { IWebhookDeliveryData, IWebhookResponse } from "@kontent-ai/webhook-helper/dist/cjs/models/webhook-models.class.ts"
 import { Handler } from "@netlify/functions";
-import {
-  IWebhookDeliveryData,
-  IWebhookResponse
-} from "@kontent-ai/webhook-helper/dist/cjs/models/webhook-models.class.ts";
+
 import packageJson from '../package.json'
 
 const CONFIG_DELIMITER = ",";

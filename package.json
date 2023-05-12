@@ -9,10 +9,15 @@
   "bugs": {
     "url": "https://github.com/kontent-ai/integration-example-netlify/issues"
   },
+  "scripts": {
+    "eslint": "eslint functions"
+  },
   "dependencies": {
     "@kontent-ai/delivery-sdk": "^12.1.0",
     "@kontent-ai/webhook-helper": "^2.0.1",
-    "@netlify/functions": "^1.2.0"
+    "@netlify/functions": "^1.2.0",
+    "eslint": "^8.40.0",
+    "eslint-config-kontent-ai": "^0.1.5"
   },
   "devDependencies": {
     "@types/node": "^18.7.17"
