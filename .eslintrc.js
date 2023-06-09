@@ -1,5 +1,5 @@
 module.exports = {
-  "extends": [
-    "kontent-ai",
+  extends: [
+    "@kontent-ai",
   ],
 };
