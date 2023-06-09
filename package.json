@@ -10,12 +10,14 @@
     "url": "https://github.com/kontent-ai/integration-example-netlify/issues"
   },
   "scripts": {
-    "eslint": "eslint functions"
+    "eslint": "eslint functions",
+    "format": "dprint fmt"
   },
   "dependencies": {
     "@kontent-ai/delivery-sdk": "^12.1.0",
     "@kontent-ai/webhook-helper": "^2.0.1",
     "@netlify/functions": "^1.2.0",
+    "dprint": "^0.37.1",
     "eslint": "^8.40.0",
     "eslint-config-kontent-ai": "^0.1.5"
   },
