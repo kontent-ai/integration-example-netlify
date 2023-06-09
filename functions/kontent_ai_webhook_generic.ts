@@ -1,14 +1,16 @@
-import { DeliveryClient } from '@kontent-ai/delivery-sdk';
-import { signatureHelper } from '@kontent-ai/webhook-helper';
-import { IWebhookDeliveryData, IWebhookResponse } from "@kontent-ai/webhook-helper/dist/cjs/models/webhook-models.class.ts"
+import { DeliveryClient } from "@kontent-ai/delivery-sdk";
+import { signatureHelper } from "@kontent-ai/webhook-helper";
+import {
+  IWebhookDeliveryData,
+  IWebhookResponse,
+} from "@kontent-ai/webhook-helper/dist/cjs/models/webhook-models.class.ts";
 import { Handler } from "@netlify/functions";
 
-import packageJson from '../package.json'
+import packageJson from "../package.json";
 
 const CONFIG_DELIMITER = ",";
 
 export const handler: Handler = async (event) => {
-
   // Only receiving POST requests
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -19,7 +21,13 @@ export const handler: Handler = async (event) => {
   }
 
   // Consistency check - make sure your netlify environment variable and your webhook secret matches
-  if (!signatureHelper.isValidSignatureFromString(event.body, process.env.KONTENT_SECRET ?? '', event.headers['x-kc-signature'] ?? '')) {
+  if (
+    !signatureHelper.isValidSignatureFromString(
+      event.body,
+      process.env.KONTENT_SECRET ?? "",
+      event.headers["x-kc-signature"] ?? "",
+    )
+  ) {
     return { statusCode: 401, body: "Unauthorized" };
   }
 
@@ -38,15 +46,17 @@ export const handler: Handler = async (event) => {
 
   // if the method or type is not allowed abort
   if (projectId && allowedOperations.includes(operation) && allowedTypes.includes(type)) {
-    return { statusCode: 200, body: '[]' };
+    return { statusCode: 200, body: "[]" };
   }
 
   // download the affected items
   const deliveryClient = new DeliveryClient({
     projectId,
-    globalHeaders: () => [{ header: 'X-KC-SOURCE', value: `${packageJson.name};${packageJson.version}` }]
+    globalHeaders: () => [{ header: "X-KC-SOURCE", value: `${packageJson.name};${packageJson.version}` }],
   });
-  const response = await Promise.all(webhookData.items.map(item => deliveryClient.item(item.codename).languageParameter(item.language).toPromise()));
+  const response = await Promise.all(
+    webhookData.items.map(item => deliveryClient.item(item.codename).languageParameter(item.language).toPromise()),
+  );
 
   // print the affected content items into function log
   console.log(JSON.stringify(response));
